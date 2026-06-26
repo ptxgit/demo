@@ -744,7 +744,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 英雄联盟宣传页 | 仅供学习参考使用</p>
+            <p>&copy; <span id="copyright-year">2026</span> 英雄联盟宣传页 | 仅供学习参考使用</p>
         </div>
     </footer>
 
@@ -810,6 +810,12 @@
             }
             lastScroll = currentScroll;
         });
+
+        // 动态更新版权年份
+        const yearEl = document.getElementById('copyright-year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
     </script>
 </body>
 </html>
